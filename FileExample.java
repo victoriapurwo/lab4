@@ -5,7 +5,7 @@ import java.util.List;
 
 public class FileExample {
 
-  /*
+  /* 
 
   Given a File (which can represent either a file or directory), return a list
   of all the files in that directory and all its subdirectories.
