@@ -3,7 +3,7 @@ import java.util.List;
 
 interface StringChecker { boolean checkString(String s); }
  
-class ListExamples {
+class ListExamples { 
 
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
@@ -23,7 +23,9 @@ class ListExamples {
   // and return a new list that has all the strings in both list in sorted order.
   static List<String> merge(List<String> list1, List<String> list2) {
     List<String> result = new ArrayList<>();
-    int index1 = 0, index2 = 0;
+    int index1 = 0;
+    int index2 = 0;
+
     while(index1 < list1.size() && index2 < list2.size()) {
       if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
         result.add(list1.get(index1));
@@ -34,14 +36,17 @@ class ListExamples {
         index2 += 1;
       }
     }
+
     while(index1 < list1.size()) {
       result.add(list1.get(index1));
       index1 += 1;
     }
+
     while(index2 < list2.size()) {
       result.add(list2.get(index2));
       index1 += 1;
     }
+    
     return result;
   }
 
